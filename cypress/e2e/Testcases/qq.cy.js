@@ -13,6 +13,13 @@ const storeCodes = [
 
 describe('test suite 2', () => {
      
+it('test', function(){
+
+  cy.visit("https://uat.tjm.com.au/")
+
+})
+
+
 //     it('login', function() {
 //         cy.visit("https://uat.tjm.com.au/")
   
