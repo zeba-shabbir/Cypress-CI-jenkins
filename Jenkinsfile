@@ -14,6 +14,26 @@ pipeline {
             steps {
                 bat 'npx cypress run --reporter mochawesome'
             }
+
+
+            stage('Archive Reports') {
+      steps {
+        archiveArtifacts artifacts: 'cypress/reports/**', allowEmptyArchive: true
+      }
+    }
+
+stage('Publish Report') {
+      steps {
+        publishHTML(target: [
+          reportDir: 'cypress/reports',
+          reportFiles: 'mochawesome.html',
+          reportName: 'Cypress Test Report'
+        ])
+      }
+    }
+
+    
+
         }
     }
 }
