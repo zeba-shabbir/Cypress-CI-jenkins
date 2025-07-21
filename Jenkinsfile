@@ -18,14 +18,14 @@ pipeline {
 
             stage('Archive Reports') {
       steps {
-        archiveArtifacts artifacts: 'cypress/reports/**', allowEmptyArchive: true
+        archiveArtifacts artifacts: 'mochawesome-report/**', allowEmptyArchive: true
       }
     }
 
 stage('Publish Report') {
       steps {
         publishHTML(target: [
-          reportDir: 'cypress/reports',
+          reportDir: 'mochawesome-report',
           reportFiles: 'mochawesome.html',
           reportName: 'Cypress Test Report'
         ])
