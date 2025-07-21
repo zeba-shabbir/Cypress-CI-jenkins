@@ -28,7 +28,7 @@ it('Fill parent info', function() {
   it.only('Should search for "Cypress Testing" and show results', () => {
     
      cy.visit('https://example.com');
-    cy.title().should('include', 'Example Domain');
+    cy.title().should('include', 'Examplee Domain');
    
   });
 
