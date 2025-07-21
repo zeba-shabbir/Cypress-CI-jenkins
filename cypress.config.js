@@ -4,6 +4,10 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
+    retries: {
+      runMode: 2,  // Retry twice in CI
+      openMode: 0,
+    },
     "chromeWebSecurity": false,
     "pageLoadTimeout" : 100000, 
     
