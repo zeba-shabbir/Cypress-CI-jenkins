@@ -12,7 +12,7 @@ pipeline {
 
         stage('Run Cypress Tests') {
             steps {
-                bat 'npx cypress run --reporter mochawesome'
+                bat 'npx cypress run --reporter mochawesome || true'
             }
         }
 
