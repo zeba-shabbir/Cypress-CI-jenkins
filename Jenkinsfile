@@ -14,7 +14,7 @@ pipeline {
             steps {
                 bat 'npx cypress run --reporter mochawesome'
             }
-
+        }
 
             stage('Archive Reports') {
       steps {
@@ -32,8 +32,8 @@ stage('Publish Report') {
       }
     }
 
-    
 
-        }
+
+        
     }
 }
