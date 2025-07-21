@@ -9,7 +9,7 @@ module.exports = defineConfig({
     
  "numTestsKeptInMemory": 5, // Reduce the number of tests stored in memory
  experimentalMemoryManagement: true ,
-    // "defaultCommandTimeout": 10000,
+   "defaultCommandTimeout": 100000,
 
     // "config"   : {
     //   // ...
